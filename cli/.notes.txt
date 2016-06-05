@@ -1,0 +1,13 @@
+NEED:
+
+plop.json structure - what goes in the plop.json? name, description, license, language?, stuff?
+
+overall requirements for `plops`: structure with a .git, plop.json, and template dir
+
+CLIs... how do they work?
+
+================================================================================================
+STEP 1: Develop plop.json and mock up a plop with a plop.json to put on github
+STEP 2: Write a CLI that can download (`install`) PLOPs to `~/.config/` and copy (`use`) them
+STEP 3: ...
+STEP 4:
