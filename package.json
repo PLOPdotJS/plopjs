@@ -1,0 +1,23 @@
+{
+  "name": "plopjs",
+  "version": "0.1.0",
+  "description": "Cloud-based storage for organization-level boilerplate code",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckperez/plopjs.git"
+  },
+  "author": "Chris Perez <chris.k.perez@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckperez/plopjs/issues"
+  },
+  "homepage": "https://github.com/ckperez/plopjs#readme"
+}
