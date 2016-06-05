@@ -3,7 +3,7 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-
+const errHandle = require(__dirname + '/lib/error-handling');
 const dbPort = process.env.MONGODB_URI || 'mongodb://localhost/plop_db';
 console.log('dbPort', dbPort);
 
@@ -17,9 +17,7 @@ app.use('/', adminRoutes);
 app.use('/', godRoutes);
 app.use('/', userRoutes);
 
-app.use((err, req, res) => {
-  res.status(500).json({message: err.message});
-});
+app.use(errHandle);
 
 app.use((req, res) => {
   res.status(404).json({message: 'page not found'});
