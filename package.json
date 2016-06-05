@@ -1,0 +1,40 @@
+{
+  "name": "plopjs",
+  "version": "0.1.0",
+  "description": "Cloud-based storage for organization-level boilerplate code",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "node server.js",
+    "lint": "./node_modules/eslint/bin/eslint.js *"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckperez/plopjs.git"
+  },
+  "author": "Chris Perez <chris.k.perez@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ckperez/plopjs/issues"
+  },
+  "homepage": "https://github.com/ckperez/plopjs#readme",
+  "dependencies": {
+    "bcrypt": "^0.8.6",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "jsonwebtoken": "^7.0.0",
+    "mongoose": "^4.4.19"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-http": "^2.0.1",
+    "eslint": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "gulp-mocha": "^2.2.0",
+    "mocha": "^2.5.3"
+  }
+}
