@@ -10,6 +10,10 @@ vorpal.command('install [template] [rename]', 'clones a plop template from githu
   .action(function(args, callback){
     let template = args.template;
     let rename = args.rename;
+
+    GIT.Clone(template, process.env.HOME + '/.config/plop/' + rename);
+    callback();
+    //error handling prompt for existing template overwrite.
   });
 
 vorpal.command('use [template]', 'copies a plop template you have saved into your working directory')
