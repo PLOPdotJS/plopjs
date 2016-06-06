@@ -10,8 +10,11 @@ vorpal.command('install [template] [rename]', 'clones a plop template from githu
   .action(function(args, callback){
     let template = args.template;
     let rename = args.rename;
+    console.log('clonded it');
+    GIT.Clone(template, rename);
+    callback();
   });
 
-vorpal.command('use [template]', 'copies a plop template you have saved into your working directory')
+vorpal.command('use [template]', 'copies a plop template you have saved into your working directory');
 
-vorpal.command('delete [template]', 'removes a locally saved plop template')
+vorpal.command('delete [template]', 'removes a locally saved plop template');
