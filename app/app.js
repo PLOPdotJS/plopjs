@@ -3,13 +3,15 @@
 const fs = require('fs-extra');
 const vorpal = require('vorpal')();
 const GIT = require('nodegit');
+const initPrompt = require('./init-prompt');
 
 vorpal.delimiter('plop$').show();
 
 vorpal.command('install [template_repo_url] [rename]', 'clones a plop template from github into your ~/.config/plop/ directory')
   .action(function(args, callback){
     let template = args.template_repo_url;
-    let rename = args.rename;
+    let default_name = template.split('/').slice(-1).join().slice(0, -4);
+    let rename = args.rename || default_name;
     //if stuff?
     //TODO: clone stuff without .git
     GIT.Clone(template, process.env.HOME + '/.config/plop/' + rename)
@@ -43,7 +45,56 @@ vorpal.command('delete [template_name]', 'removes a locally saved plop template'
 //rimraf or dell
 
 vorpal.command('init [template_name]', 'walks you through building a plop template')
-//mkdirp
+  .action(function(args, callback){
+      let jsonStuff;
+      this.prompt([
+        {
+          type: 'input',
+          name: 'Name',
+          default: false,
+          message: 'Template name? '
+        },
+        {
+          type: 'input',
+          name: 'Description',
+          default: false,
+          message: 'Description? '
+        },
+        {
+          type: 'input',
+          name: 'Author',
+          default: false,
+          message: 'Author? '
+        },
+        {
+          type: 'input',
+          name: 'License',
+          default: false,
+          message: 'License? '
+        },
+        {
+          type: 'input',
+          name: 'Version',
+          default: false,
+          message: 'Version? '
+        }
+      ])
+    .then((answers)=>{
+      jsonStuff = JSON.stringify(answers);
+      //this.log(jsonStuff);
+    }).catch();
+
+    /* make template dir in working dir if not exists */
+
+    /* make README.md in working dir if not exists */
+
+    /* write jsonStuff content into plop.json in working dir */
+    fs.writeJson('./plop.json', jsonStuff, (err)=>{
+      this.log(err);
+    });
+    callback();
+  });
+
 
 vorpal.command('list', 'displays a list of templates saved locally')
   .action(function(args, callback){
@@ -56,3 +107,6 @@ vorpal.command('list', 'displays a list of templates saved locally')
     });
     callback();
   });
+
+const exit = vorpal.find('exit');
+exit.alias('k');
