@@ -51,7 +51,7 @@ vorpal.command('list', 'displays a list of templates saved locally')
       if (err) return new Error('Failed to find templates');
       if (files.length < 1) console.error('You have no templates saved locally');
       for (var i = 0; i < files.length; i++){
-        console.log(files[i] + '\n');
+        this.log(files[i]);
       }
     });
     callback();
