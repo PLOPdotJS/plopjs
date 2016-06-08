@@ -5,11 +5,11 @@ const vorpal = require('vorpal')();
 
 vorpal.delimiter('plop$').show();
 
-const use = require(__dirname + '/../lib/vorpal-use');
-const install = require(__dirname + '/../lib/vorpal-install');
-const del = require(__dirname + '/../lib/vorpal-delete');
-const list = require(__dirname + '/../lib/vorpal-list');
-const init = require(__dirname + '/../lib/vorpal-init');
+const use = require(__dirname + '/lib/vorpal-use');
+const install = require(__dirname + '/lib/vorpal-install');
+const del = require(__dirname + '/lib/vorpal-delete');
+const list = require(__dirname + '/lib/vorpal-list');
+const init = require(__dirname + '/lib/vorpal-init');
 
 vorpal.command('install [template_repo_url] [rename]', 'clones a plop template from github into your ~/.config/plop/ directory')
   .action(install);
