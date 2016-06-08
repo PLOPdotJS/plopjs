@@ -3,6 +3,7 @@
 ###Cloud-based storage for organization-level boilerplate code
 
 ## What is plopjs  
+
 Plopjs was created to simplify company project development set up time. Plopjs can easily save development teams countless man hours due to repetitive set up time and also reduce inconsistency and debugging. Once a template is installed they will be able to be accessed on your local client anywhere anytime! Now that you have a sweet raise for showing your boss how to cut production cost and have more free time what are you going to do?  
 
 ## What you will need
@@ -14,6 +15,7 @@ If you are not sure what node is please visit <https://nodejs.org/en/>. Alternat
 which node
 ```  
 and this will show you the directory that node is located in on your computer if it is already installed.  
+
 
 ```shell
 /Users/example/.node/bin/node
@@ -28,6 +30,7 @@ npm install plopjs
 //TODO need to add info on how to start the plop command line.  
 
 ## How to use    
+
 
 ##plop$ install  
 ```shell
@@ -85,6 +88,7 @@ plop$ License: <MIT>
 plop$ Version: 0.1.0
 ```  
 After the init prompts are completed it exits the repl. You may now change into the template directory and start making your template.  
+
 ```shell
 plop$ init
 Template name? My_First_Plop
@@ -100,6 +104,7 @@ template
 ​
 Change directories into your template and start building your plop!
 ```  
+
 Once you have your template built out you may either:  
 
 - create a new github repository on git hub and push your template
