@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "Cloud-based storage for organization-level boilerplate code",
   "preferGlobal": true,
-  "main": "server.js",
+  "main": "plop.js",
   "directories": {
     "test": "test"
   },
