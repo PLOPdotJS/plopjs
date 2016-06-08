@@ -1,41 +1,45 @@
 {
-  "name": "plopjs",
-  "version": "0.2.0",
-  "description": "Cloud-based storage for organization-level boilerplate code",
-  "preferGlobal": true,
-  "main": "plop.js",
-  "directories": {
-    "test": "test"
-  },
-  "scripts": {
-    "test": "./node_modules/mocha/bin/mocha",
-    "start": "node plop.js",
-    "lint": "./node_modules/eslint/bin/eslint.js *"
-  },
-  "bin": {
-    "plop": "./plop.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ckperez/plopjs.git"
-  },
-  "author": "Chris Perez <chris.k.perez@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ckperez/plopjs/issues"
-  },
-  "homepage": "https://github.com/ckperez/plopjs#readme",
-  "dependencies": {
-    "fs-extra": "^0.30.0",
-    "nodegit": "^0.13.1",
-    "vorpal": "^1.11.1"
-  },
-  "devDependencies": {
-    "chai": "^3.5.0",
-    "eslint": "^2.11.1",
-    "gulp": "^3.9.1",
-    "gulp-eslint": "^2.0.0",
-    "gulp-mocha": "^2.2.0",
-    "mocha": "^2.5.3"
-  }
+    "name": "plopjs",
+    "version": "0.2.0",
+    "description": "Cloud-based storage for organization-level boilerplate code",
+    "preferGlobal": true,
+    "main": "plop.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "test": "./node_modules/mocha/bin/mocha",
+        "start": "node plop.js",
+        "lint": "./node_modules/eslint/bin/eslint.js *"
+    },
+    "bin": {
+        "plop": "./plop.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/PLOPdotJS/plopjs.git"
+    },
+    "author": {
+        "name": "Chris Perez <chris.k.perez@gmail.com>",
+        "name": "Dan Stineback <dstineback@gmail.com",
+        "name": "Stephen Schroder <schrode50@gmail.com>"
+    },
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/PLOPdotJS/plopjs/issues"
+    },
+    "homepage": "https://github.com/PLOPdotJS/plopjs#readme",
+    "dependencies": {
+        "fs-extra": "^0.30.0",
+        "nodegit": "^0.13.1",
+        "vorpal": "^1.11.1"
+    },
+    "devDependencies": {
+        "chai": "^3.5.0",
+        "eslint": "^2.11.1",
+        "gulp": "^3.9.1",
+        "gulp-eslint": "^2.0.0",
+        "gulp-mocha": "^2.2.0",
+        "mocha": "^2.5.3"
+    }
 }
