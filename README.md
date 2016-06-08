@@ -23,6 +23,9 @@ which node
 ```shell
 npm install plopjs
 ```  
+//TODO  
+## How to Start your plop  
+//TODO need to add info on how to start the plop command line.  
 
 ## How to use    
 
@@ -34,6 +37,7 @@ $plop install <github template repo url> <name that you choose to name your temp
 ```shell
 $plop install https://github.com/PLOPdotJS/plop-test.git test
 ```  
+##VERY IMPORTANT ALL GITHUB REPOS MUST BE NON SSH. IT WILL ONLY WORK HTTPS.
 
 ###Please note that if you do not name your plop repo on install it will default to the name of the repo.  
 
@@ -42,7 +46,7 @@ $plop install https://github.com/PLOPdotJS/plop-test.git test
 $plop use <name of saved template> <path you would like the template loaded to>
 ```  
 
-####use will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
+####plop *use* will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
 
 ##$plop init  
 ```shell
@@ -56,7 +60,7 @@ plop-name or plop_name
 ###naming your plop correctly will allow for easy fluid installation. Not naming your plop correctly would result in error.      
 ##using plop init allows a starting point to create a plop.json and start making your own plop template. This is your chance to be creative and customize your plop.  
 
-###The init prompts will walk you through making a new plop.json file. It will also make an empty README.md that you will need to populate and also an empty template directory. Make sure to make your template *INSIDE* the template directory. Any files other then the plop.json and README.md that are outside the template directory will not be included in your plop.  
+###plop *init* prompts will walk you through making a new plop.json file. It will also make an empty README.md that you will need to populate and also an empty template directory. Make sure to make your template *INSIDE* the template directory. Any files other then the plop.json and README.md that are outside the template directory will not be included in your plop.  
 
 ###Example of the plop.json prompt  
 ```shell
@@ -92,14 +96,28 @@ Change directories into your template and start building your plop!
 ```shell
 $plop list
 ```  
-###list prints a list of plop templates that are saved and available on your local client. Once a new plop is installed using plop install it will be added to the list of plops.  
+###plop *list* prints a list of plop templates that are saved and available on your local client. Once a new plop is installed using plop install it will be added to the list of plops.  
 
 ##$plop delete  
 ```shell
 $plop delete
 ```   
-###delete will delete any plop that is saved on your local client.
+###plop *delete* will delete any plop that is saved on your local client.
+
 ##Please note that delete *WILL* delete the file so double check that you are using the correct plop name.  
+
+##$plop k  
+```shell  
+$plop k  
+```  
+###plop *k* will exit the repl and take you to node shell.  
+
+##$plop help  
+
+```shell
+$plop help
+```  
+###plop *help* will bring up a list of plop commands and options.  
 
 ##Dependencies  
 - vorpal
