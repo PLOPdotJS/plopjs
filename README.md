@@ -152,6 +152,6 @@ plop *help* will bring up a list of plop commands and options.
 
 ## Development Team  
 
-#### *Chris Perez* <https://github.com/ckperez>
-#### *Dan Stineback* <https://github.com/dstineback>
-#### *Stephen Schroder* <https://github.com/schrode50>
+ *Chris Perez* <https://github.com/ckperez>
+ *Dan Stineback* <https://github.com/dstineback>
+ *Stephen Schroder* <https://github.com/schrode50>
