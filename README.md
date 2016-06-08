@@ -21,7 +21,8 @@ and this will show you the directory that node is located in on your computer if
 /Users/example/.node/bin/node
 ```  
 
-//TODO add info about NPM i for all dependencies
+//TODO add info about NPM i for all dependencies  
+
 ## How to install  
 
 installation of plopjs is a simple npm install. Plopjs should be install globally to work correctly. To install run
@@ -29,7 +30,6 @@ installation of plopjs is a simple npm install. Plopjs should be install globall
 ```shell
 npm install -g plopjs  
 ```  
-
 
 ## How to Start your plop$
 To start your plop$ repl it is very simple, just type  
