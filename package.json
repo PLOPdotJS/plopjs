@@ -19,7 +19,11 @@
         "type": "git",
         "url": "git+https://github.com/PLOPdotJS/plopjs.git"
     },
-    "author": "Chris Perez <chris.k.perez@gmail.com>",
+    "author": {
+        "name": "Chris Perez <chris.k.perez@gmail.com>",
+        "name": "Dan Stineback <dstineback@gmail.com",
+        "name": "Stephen Schroder <schrode50@gmail.com>"
+    },
     "license": "ISC",
     "bugs": {
         "url": "https://github.com/PLOPdotJS/plopjs/issues"
