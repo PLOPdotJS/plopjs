@@ -81,17 +81,22 @@ vorpal.command('init [template_name]', 'walks you through building a plop templa
       ])
     .then((answers)=>{
       jsonStuff = JSON.stringify(answers);
-      //this.log(jsonStuff);
-    }).catch();
-
-    /* make template dir in working dir if not exists */
-
-    /* make README.md in working dir if not exists */
-
-    /* write jsonStuff content into plop.json in working dir */
-    fs.writeJson('./plop.json', jsonStuff, (err)=>{
-      this.log(err);
-    });
+      fs.outputFile('./plop.json', jsonStuff, (err)=>{
+        if (err) this.log(err);
+        fs.ensureFile('./README.md', (err)=>{
+          if (err) this.log(err);
+          fs.mkdirs('./template', (err)=>{
+            if (err) this.log(err);
+            this.log('Here is your plop.json, README.md, and template directory: \n');
+            let newPlop = fs.readdirSync('./');
+            for (var i = 0; i < newPlop.length; i++){
+              this.log(newPlop[i]);
+            }
+            this.log('\nChange directories into your template and start building your plop!');
+          });
+        });
+      });
+    }).catch(err => this.log(err));
     callback();
   });
 
