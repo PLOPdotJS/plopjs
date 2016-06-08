@@ -5,7 +5,11 @@ const expect = chai.expect;
 
 const fs = require('fs-extra');
 
+<<<<<<< HEAD
 const del = require(__dirname + '/../lib/vorpal-delete');
+=======
+const del = require(__dirname + '/../lib/delete');
+>>>>>>> master
 
 describe('should properly handle the delete functionality for plops', () => {
   it('should recognize the delete function', () => {
