@@ -10,8 +10,10 @@
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha",
     "start": "node server.js",
-    "lint": "./node_modules/eslint/bin/eslint.js *",
-    "plop": "echo 'plop start'='node_plopjs.js' >> ~/.bash_profile"
+    "lint": "./node_modules/eslint/bin/eslint.js *"
+  },
+  "bin": {
+    "plop": "./plop.js"
   },
   "repository": {
     "type": "git",
