@@ -53,8 +53,22 @@ $plop init <name of what you want the template to be named>
 ```shell
 plop-name or plop_name
 ```
-###naming your plop correctly will allow for easy fluid installation.  
-##using plop init allows a starting point to create a plop.json and start making your own plop template. This is your chance to be creative and customize your plop. Once you have your template built out you may either:
+###naming your plop correctly will allow for easy fluid installation. Not naming your plop correctly would result in error.    
+##using plop init allows a starting point to create a plop.json and start making your own plop template. This is your chance to be creative and customize your plop.
+
+###The init prompts will walk you through making a new plop.json file. It will also make an empty README.md that you will need to populate and also an empty template directory. Make sure to make your template *INSIDE* the template directory. Any files other then the plop.json and README.md that are outside the template directory will not be included in your plop.  
+
+###Example of the plop.json prompt  
+```shell
+$plop Template name: <name>
+$plop Description: <description of template>
+$plop Author: <name or email of author>
+$plop License: <MIT>
+$plop Version: 0.1.0
+```  
+###After the init prompts are completed you may change into the template directory and start making your template.
+
+###Once you have your template built out you may either:
 
 ###-create a new github repository on git hub and push your template
 ###or
