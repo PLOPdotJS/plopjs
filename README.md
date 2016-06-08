@@ -20,6 +20,9 @@ and this will show you the directory that node is located in on your computer if
 ```shell
 /Users/example/.node/bin/node
 ```  
+
+//TODO add info about NPM i for all dependencies  
+
 ## How to install  
 
 installation of plopjs is a simple npm install. Plopjs should be install globally to work correctly. To install run
@@ -28,12 +31,11 @@ installation of plopjs is a simple npm install. Plopjs should be install globall
 npm install -g plopjs  
 ```  
 
-
 ## How to Start your plop$
 To start your plop$ repl it is very simple, just type  
 
 ```shell
-plop$
+plop
 ```  
 once plop$ is started you should see  
 
@@ -50,11 +52,12 @@ from ```plop$``` you can then run any of efficient plop$ commands.
 ```shell
 plop$ install <template_url> [options]
 ````  
+####Example  
 
 ```shell
 plop$ install https://github.com/PLOPdotJS/plop-test.git test
 ```  
-<template_url> is the github repo url for the template that you are choosing.  
+*<template_url>* is the github repo url for the template that you are choosing.  
 
 [options] is the name that you choose to give your template.  
 
@@ -66,7 +69,7 @@ plop$ install https://github.com/PLOPdotJS/plop-test.git test
 ```shell
 plop$ use <template> [options]  
 ```  
-<template> name of installed plopjs template.  
+*<template>* name of installed plopjs template.  
 ```
 sample
 ```
@@ -79,14 +82,8 @@ plop$ *use* will load what ever template you choose into specified directory or 
 
 ##plop$ init  
 ```shell
-plop$ init <name of what you want the template to be named>
+plop$ init
 ```  
-
-####Very important to note the naming structure of any plopjs template.  
-```shell
-plop-name or plop_name
-```  
-naming your plopjs correctly will allow for easy fluid installation. Not naming your plopjs correctly would result in error.      
 
 using plopjs init allows a starting point to create a plop.json and start making your own plopjs template. This is your chance to be creative and customize your plopjs.  
 
@@ -131,6 +128,15 @@ plop$ list
 ```  
 plop$ *list* prints a list of plopjs templates that are saved and available on your local client. Once a new plopjs is installed using plop$ *install* it will be added to the list of plopjs.  
 
+plop$ *list* also has a shorthand alias *ls*.  
+
+Example of ls alias.  
+
+```shell  
+plop$ ls
+```  
+
+
 ##plop$ delete  
 ```shell
 plop$ delete
@@ -143,10 +149,14 @@ plop$ *delete* will delete any plopjs that is saved on your local client.
 ```shell  
 plop$ exit
 ```  
-plop$ *exit* will exit the plop$ repl and take you to node shell. Exit does have an alias that will also take you out of the plop$ repl.  
+plop$ *exit* will exit the plop$ repl and take you to node shell. Exit does have an alias *k* or *q* that will also take you out of the plop$ repl.  
 
+####Example of the alias
 ```shell
 plop$ k
+```  
+```shell
+plop$ q  
 ```  
 
 ##plop$ help  
