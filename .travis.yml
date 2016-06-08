@@ -1,8 +1,16 @@
 language: node_js
 node_js:
- - 4
+  - "4"
+env:
+  - CXX=g++-4.8
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+    packages:
+      - g++-4.8
 sudo: required
 before_script: npm install
 script:
- # - npm run test
- - npm run lint
+  - npm run test
+  - npm run lint
