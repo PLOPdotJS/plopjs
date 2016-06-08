@@ -120,11 +120,15 @@ plop *delete* will delete any plop that is saved on your local client.
 
 ####Please note that delete *WILL* delete the file so double check that you are using the correct plop name.  
 
-##plop$ k  
+##plop$ exit
 ```shell  
-plop$ k  
+plop$ exit
 ```  
-plop *k* will exit the repl and take you to node shell.  
+plop *exit* will exit the repl and take you to node shell. Exit does have an alias that will also take you out of the plop repl.  
+
+```shell
+plop$ k
+```  
 
 ##plop$ help  
 
@@ -148,6 +152,6 @@ plop *help* will bring up a list of plop commands and options.
 
 ## Development Team  
 
-### *Chris Perez* <https://github.com/ckperez>
-### *Dan Stineback* <https://github.com/dstineback>
-### *Stephen Schroder* <https://github.com/schrode50>
+#### *Chris Perez* <https://github.com/ckperez>
+#### *Dan Stineback* <https://github.com/dstineback>
+#### *Stephen Schroder* <https://github.com/schrode50>
