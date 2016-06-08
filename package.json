@@ -26,18 +26,12 @@
   },
   "homepage": "https://github.com/ckperez/plopjs#readme",
   "dependencies": {
-    "bcrypt": "^0.8.6",
-    "body-parser": "^1.15.1",
-    "express": "^4.13.4",
     "fs-extra": "^0.30.0",
-    "jsonwebtoken": "^7.0.0",
-    "mongoose": "^4.4.19",
     "nodegit": "^0.13.1",
     "vorpal": "^1.11.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "chai-http": "^2.0.1",
     "eslint": "^2.11.1",
     "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0",
