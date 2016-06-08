@@ -1,0 +1,26 @@
+[{
+    "type": "input",
+    "name": "Name",
+    "default": false,
+    "message": "Template name? "
+}, {
+    "type": "input",
+    "name": "Description",
+    "default": false,
+    "message": "Description? "
+}, {
+    "type": "input",
+    "name": "Author",
+    "default": false,
+    "message": "Author? "
+}, {
+    "type": "input",
+    "name": "License",
+    "default": false,
+    "message": "License? "
+}, {
+    "type": "input",
+    "name": "Version",
+    "default": false,
+    "message": "Version? "
+}]
