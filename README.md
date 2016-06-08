@@ -66,7 +66,7 @@ $plop Author: <name or email of author>
 $plop License: <MIT>
 $plop Version: 0.1.0
 ```  
-###After the init prompts are completed it exits the repl. You may now change into the template directory and start making your template.
+###After the init prompts are completed it exits the repl. You may now change into the template directory and start making your template.  
 ```shell
 plop$ init
 Template name? My_First_Plop
@@ -81,29 +81,28 @@ plop.json
 template
 ​
 Change directories into your template and start building your plop!
-```
-
+```  
 ###Once you have your template built out you may either:
 
 ###-create a new github repository on git hub and push your template
 ###or
-###-git init and initialize a github repository from your working directory.
+###-git init and initialize a github repository from your working directory.  
 
 ##$plop list
 ```shell
 $plop list
 ```  
-###list prints a list of plop templates that are saved and available on your local client. Once a new plop is installed using plop install it will be added to the list of plops.
+###list prints a list of plop templates that are saved and available on your local client. Once a new plop is installed using plop install it will be added to the list of plops.  
 
 ##$plop delete
 ```shell
 $plop delete
 ```  
 ###delete will delete any plop that is saved on your local client.
-##Please note that delete WILL delete the file so double check that you are using the correct plop name.
+##Please note that delete *WILL* delete the file so double check that you are using the correct plop name.  
 
-## Development Team
+## Development Team  
 
-### *Chris Perez*
-### *Dan Stineback*
-### *Stephen Schroder*
+### *Chris Perez* <https://github.com/ckperez>
+### *Dan Stineback* <https://github.com/dstineback>
+### *Stephen Schroder* <https://github.com/schrode50> 
