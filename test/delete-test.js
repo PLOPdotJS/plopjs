@@ -7,7 +7,6 @@ const fs = require('fs-extra');
 
 const del = require(__dirname + '/../lib/delete');
 
-
 describe('should properly handle the delete functionality for plops', () => {
   it('should recognize the delete function', () => {
     expect(del).to.eql.function;
