@@ -3,7 +3,7 @@
 const chai = require('chai');
 const expect = chai.expect;
 
-const install = require(__dirname + '/../lib/vorpal-install');
+const install = require(__dirname + '/../lib/install');
 
 describe('install unit test', () => {
   it('should validate the install function of plopjs', () => {
