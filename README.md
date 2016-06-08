@@ -10,7 +10,7 @@ Cloud-based storage for organization-level boilerplate code
 ###plopjs is a Node module. Node will need to be installed and running correctly on your client for plopjs to function.
 
 ###If you are not sure what node is please visit <https://nodejs.org/en/>. Alternatively you can type
-```shell
+```
 which node
 ```
 ###and this will show you the directory that node is located in on your computer if it is already installed.  
@@ -66,7 +66,22 @@ $plop Author: <name or email of author>
 $plop License: <MIT>
 $plop Version: 0.1.0
 ```  
-###After the init prompts are completed you may change into the template directory and start making your template.
+###After the init prompts are completed it exits the repl. You may now change into the template directory and start making your template.
+```shell
+plop$ init
+Template name? My_First_Plop
+Description? It will make coding faster and easier
+Author? Smart Dev 3001
+License? MIT
+Version? 0.1.0
+Here is your plop.json, README.md, and template directory:
+​
+README.md
+plop.json
+template
+​
+Change directories into your template and start building your plop!
+```
 
 ###Once you have your template built out you may either:
 
