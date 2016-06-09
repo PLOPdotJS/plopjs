@@ -20,9 +20,7 @@ and this will show you the directory that node is located in on your computer if
 
 ```shell
 /Users/example/.node/bin/node
-```  
-
-//TODO add info about NPM i for all dependencies  
+```    
 
 ## How to install  
 
@@ -52,8 +50,8 @@ from ```plop$``` you can then run any of efficient plop$ commands.
 ##plop$ install  
 ```shell
 plop$ install <template_url> [options]
-````  
-####Example  
+```
+####Example of install   
 
 ```shell
 plop$ install https://github.com/PLOPdotJS/plop-test.git test
@@ -62,9 +60,18 @@ plop$ install https://github.com/PLOPdotJS/plop-test.git test
 
 [options] is the name that you choose to give your template.  
 
+plop$ *install* will create a new plopjs template that will be stored locally in your plopjs cache directory. Once the plopjs template is installed it will be able to be accessed by any of the plop$ commands.
+
 ####Please note that if you do not name your plopjs repo on install it will default to the name of the repo.
 
 ##VERY IMPORTANT ALL GITHUB REPOS MUST BE NON SSH. IT WILL ONLY WORK HTTPS.
+
+####Example of the alias  
+
+```shell  
+plop$ i
+```  
+
 
 ##plop$ use  
 ```shell
@@ -80,6 +87,8 @@ sample
 /project
 ```
 plop$ *use* will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
+
+For *node* projects run ```npm i``` to install all the required dependencies that are used in the plopjs template.  Not installing the dependencies will throw err and not run the plopjs template correctly.  
 
 ##plop$ init  
 ```shell
@@ -131,12 +140,26 @@ plop$ *list* prints a list of plopjs templates that are saved and available on y
 
 plop$ *list* also has a shorthand alias *ls*.  
 
-Example of ls alias.  
+####Example of alias    
 
 ```shell  
 plop$ ls
 ```  
 
+##plop$ save
+
+```shell  
+plop$ save
+```  
+plop$ *save* will take the existing plopjs template that you created from scratch and save locally to your plopjs cache directory. You can then use ```plop$ lsit``` to verify that your template has been saved. Now that new plopjs template will be available for any future projects.
+
+*save* also has an alias *s*.  
+
+####Example of the alias  
+
+```shell
+plop$ s
+```  
 
 ##plop$ delete  
 ```shell
