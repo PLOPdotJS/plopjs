@@ -80,14 +80,14 @@ plop$ i
 ```shell
 plop$ use <template> [options]  
 ```  
-*template* name of installed plopjs template.  
-```
-sample
+*template* is the name of installed plopjs template.  
+```shell
+plop$ use sample
 ```
 
 [options] path you would like the template loaded to.  
 ```
-/project
+plop$ use sample /project
 ```
 plop$ *use* will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
 
@@ -95,10 +95,10 @@ For *node* projects run ```npm i``` to install all the required dependencies tha
 
 ##plop$ init  
 ```shell
-plop$ init
+plop$ init  
 ```  
 
-using plopjs init allows a starting point to create a plop.json and start making your own plopjs template. This is your chance to be creative and customize your plopjs.  
+plopjs *init* allows a starting point to create a plop.json and start making your own plopjs template. This is your chance to be creative and customize your plopjs.  
 
 plop$ *init* prompts will walk you through making a new plop.json file. It will also make an empty README.md that you will need to populate and also an empty template directory. Make sure to make your template *INSIDE* the template directory. Any files other then the plop.json and README.md that are outside the template directory will not be included in your plopjs.  
 
@@ -152,9 +152,11 @@ plop$ ls
 ##plop$ save
 
 ```shell  
-plop$ save
+plop$ save [name]
 ```  
-plop$ *save* will take the existing plopjs template that you created from scratch and save locally to your plopjs cache directory. You can then use ```plop$ lsit``` to verify that your template has been saved. Now that new plopjs template will be available for any future projects.
+plop$ *save* will take the existing plopjs template that you created from scratch and save locally to your plopjs cache directory. You can then use ```plop$ lsit``` to verify that your template has been saved. Now that new plopjs template will be available for any future projects.  
+
+[name] is the name you choose to name the new plopjs template you created.  
 
 *save* also has an alias *s*.  
 
@@ -205,6 +207,7 @@ plop$ *help* will bring up a list of plop$ commands and options.
 - gulp-eslint
 - gulp-mocha
 - mocha  
+
 
 ## Development Team  
 
