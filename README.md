@@ -56,7 +56,8 @@ plop$ install <template_url> [options]
 ```shell
 plop$ install https://github.com/PLOPdotJS/plop-test.git test
 ```  
-*<template_url>* is the github repo url for the template that you are choosing.  
+
+*template_url* is the github repo url for the template that you are choosing.  
 
 [options] is the name that you choose to give your template.  
 
@@ -64,7 +65,9 @@ plop$ *install* will create a new plopjs template that will be stored locally in
 
 ####Please note that if you do not name your plopjs repo on install it will default to the name of the repo.
 
-##VERY IMPORTANT ALL GITHUB REPOS MUST BE NON SSH. IT WILL ONLY WORK HTTPS.
+###VERY IMPORTANT ALL GITHUB REPOS MUST BE NON SSH. IT WILL ONLY WORK HTTPS.
+
+plop$ install also has an alias  
 
 ####Example of the alias  
 
@@ -77,7 +80,7 @@ plop$ i
 ```shell
 plop$ use <template> [options]  
 ```  
-*<template>* name of installed plopjs template.  
+*template* name of installed plopjs template.  
 ```
 sample
 ```
