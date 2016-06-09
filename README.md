@@ -72,7 +72,7 @@ plop$ install also has an alias
 ####Example of the alias  
 
 ```shell  
-plop$ i
+plop$ i <template_url> [options]
 ```  
 
 
@@ -131,9 +131,11 @@ Change directories into your template and start building your plopjs!
 
 Once you have your template built out you may either:  
 
-- create a new github repository on git hub and push your template
+- create a new <https://github.com/> repository on git hub and push your template.  
 or
-- git init and initialize a github repository from your working directory.  
+- git init and initialize a github repository from your working directory.
+or  
+- use ```plop$ save``` command.   
 
 ##plop$ list  
 ```shell
@@ -163,12 +165,12 @@ plop$ *save* will take the existing plopjs template that you created from scratc
 ####Example of the alias  
 
 ```shell
-plop$ s
+plop$ s [name]
 ```  
 
 ##plop$ delete  
 ```shell
-plop$ delete
+plop$ delete [name]
 ```   
 plop$ *delete* will delete any plopjs that is saved on your local client.
 
