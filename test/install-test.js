@@ -21,4 +21,5 @@ describe('install unit test', () => {
     let default_name = template.split('/').slice(-1).join().slice(0, -4);
     expect(default_name).to.not.eql('plops');
   });
+
 });
