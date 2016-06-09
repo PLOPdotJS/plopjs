@@ -6,11 +6,11 @@ const vorpal = require('vorpal')();
 vorpal.delimiter('plop$').show();
 
 
-const use = require(__dirname + '/lib/vorpal-use');
-const install = require(__dirname + '/lib/vorpal-install');
-const del = require(__dirname + '/lib/vorpal-delete');
-const list = require(__dirname + '/lib/vorpal-list');
-const init = require(__dirname + '/lib/vorpal-init');
+const use = require(__dirname + '/lib/use');
+const install = require(__dirname + '/lib/install');
+const del = require(__dirname + '/lib/delete');
+const list = require(__dirname + '/lib/list');
+const init = require(__dirname + '/lib/init');
 const save = require(__dirname + '/lib/save');
 
 
@@ -23,15 +23,15 @@ vorpal.command('use [template_name] [destination_path]', 'copies a plop template
 vorpal.command('delete [template_name]', 'removes a locally saved plop template.')
     .action(del);
 
+vorpal.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
+    .action(list).alias('ls');
+
 vorpal.command('init [template_name]', 'walks you through building a plop template.')
   .action(init);
-
-vorpal.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
-  .action(list).alias('ls');
 
 vorpal.command('save [name]', 'saves a locally created plop template to your ~/.config/plop/ directory. Can also use `s`.')
   .action(save).alias('s');
 
 const exit = vorpal.find('exit');
 exit.alias('k').alias('q');
-exit.description('exits the plop CLI. Can also use `k` or `q`.')
+exit.description('exits the plop CLI. Can also use `k` or `q`.');
