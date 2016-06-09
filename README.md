@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/PLOPdotJS/plopjs.svg?branch=development)](https://travis-ci.org/PLOPdotJS/plopjs)
 # plopjs
 
 ###Cloud-based storage for organization-level boilerplate code
