@@ -33,7 +33,7 @@ describe('install tests with before block', ()=>{
   let testRepo = 'https://github.com/PLOPdotJS/plop-test.git';
   before(()=>{
     originalPlopCount = fs.readdirSync(plopDir).length;
-    Plop.exec(`install ${testRepo} testingTesting`);
+    Plop.execSync(`install ${testRepo} testingTesting`);
   });
   after(()=>{
     Plop.execSync('delete testingTesting');
