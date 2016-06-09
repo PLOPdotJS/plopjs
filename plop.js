@@ -20,7 +20,7 @@ vorpal.command('install [template_repo_url] [rename]', 'clones a plop template f
 vorpal.command('use [template_name] [destination_path]', 'copies a plop template (by filename) you have saved into your working directory.')
   .action(use);
 
-vorpal.command('delete [template_name]', 'removes a locally saved plop template.')
+vorpal.command('delete [template_name...]', 'removes a locally saved plop template.')
     .action(del);
 
 vorpal.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
