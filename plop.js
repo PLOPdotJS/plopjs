@@ -3,8 +3,9 @@
 
 const Plop = require('vorpal')();
 
-Plop.delimiter('plop$').show();
+const fsAutocomplete = require('vorpal-autocomplete-fs');
 
+Plop.delimiter('plop$').show();
 
 const use = require(__dirname + '/lib/use');
 const install = require(__dirname + '/lib/install');
@@ -13,20 +14,19 @@ const list = require(__dirname + '/lib/list');
 const init = require(__dirname + '/lib/init');
 const save = require(__dirname + '/lib/save');
 
-
 Plop.command('install [template_repo_url] [rename]', 'clones a plop template from github into your ~/.config/plop/ directory. Can also use `i`.')
   .action(install).alias('i');
 
 Plop.command('use [template_name] [destination_path]', 'copies a plop template (by filename) you have saved into your working directory.')
-  .action(use);
+  .action(use).autocomplete(fsAutocomplete());
 
 Plop.command('delete [template_name...]', 'removes a locally saved plop template.')
-    .action(del);
+  .action(del).autocomplete(fsAutocomplete());
 
 Plop.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
-    .action(list).alias('ls');
+  .action(list).alias('ls');
 
-Plop.command('init [template_name]', 'walks you through building a plop template.')
+Plop.command('init', 'walks you through building a plop template.')
   .action(init);
 
 Plop.command('save [name]', 'saves a locally created plop template to your ~/.config/plop/ directory. Can also use `s`.')
