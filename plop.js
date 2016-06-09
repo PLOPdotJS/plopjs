@@ -26,7 +26,7 @@ vorpal.command('delete [template_name...]', 'removes a locally saved plop templa
 vorpal.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
     .action(list).alias('ls');
 
-vorpal.command('init [template_name]', 'walks you through building a plop template.')
+vorpal.command('init', 'walks you through building a plop template.')
   .action(init);
 
 vorpal.command('save [name]', 'saves a locally created plop template to your ~/.config/plop/ directory. Can also use `s`.')
