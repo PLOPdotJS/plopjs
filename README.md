@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/PLOPdotJS/plopjs.svg?branch=development)](https://travis-ci.org/PLOPdotJS/plopjs)
 # plopjs
 
 ###Cloud-based storage for organization-level boilerplate code
@@ -19,15 +20,29 @@ and this will show you the directory that node is located in on your computer if
 
 ```shell
 /Users/example/.node/bin/node
-```  
+```    
+
 ## How to install  
 
+installation of plopjs is a simple npm install. Plopjs should be install globally to work correctly. To install run
+
 ```shell
-npm install plopjs
+npm install -g plopjs  
 ```  
-//TODO  
-## How to Start your plop  
-//TODO need to add info on how to start the plop command line.  
+
+## How to Start your plop$
+To start your plop$ repl it is very simple, just type  
+
+```shell
+plop
+```  
+once plop$ is started you should see  
+
+```shell
+plop$  
+```  
+from ```plop$``` you can then run any of efficient plop$ commands.
+
 
 ## How to use    
 
@@ -35,48 +50,57 @@ npm install plopjs
 ##plop$ install  
 ```shell
 plop$ install <template_url> [options]
-````  
+```
+####Example of install   
 
 ```shell
 plop$ install https://github.com/PLOPdotJS/plop-test.git test
 ```  
-<template_url> is the github repo url for the template that you are choosing.  
+
+*template_url* is the github repo url for the template that you are choosing.  
 
 [options] is the name that you choose to give your template.  
 
-####Please note that if you do not name your plop repo on install it will default to the name of the repo.
+plop$ *install* will create a new plopjs template that will be stored locally in your plopjs cache directory. Once the plopjs template is installed it will be able to be accessed by any of the plop$ commands.
 
-##VERY IMPORTANT ALL GITHUB REPOS MUST BE NON SSH. IT WILL ONLY WORK HTTPS.
+####Please note that if you do not name your plopjs repo on install it will default to the name of the repo.
+
+###VERY IMPORTANT ALL GITHUB REPOS MUST BE NON SSH. IT WILL ONLY WORK HTTPS.
+
+plop$ install also has an alias  
+
+####Example of the alias  
+
+```shell  
+plop$ i <template_url> [options]
+```  
+
 
 ##plop$ use  
 ```shell
 plop$ use <template> [options]  
 ```  
-<template> name of installed plop template.  
-```
-sample
+*template* is the name of installed plopjs template.  
+```shell
+plop$ use sample
 ```
 
 [options] path you would like the template loaded to.  
 ```
-/project
+plop$ use sample /project
 ```
-plop *use* will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
+plop$ *use* will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
+
+For *node* projects run ```npm i``` to install all the required dependencies that are used in the plopjs template.  Not installing the dependencies will throw err and not run the plopjs template correctly.  
 
 ##plop$ init  
 ```shell
-plop$ init <name of what you want the template to be named>
+plop$ init  
 ```  
 
-####Very important to note the naming structure of any plop template.  
-```shell
-plop-name or plop_name
-```  
-naming your plop correctly will allow for easy fluid installation. Not naming your plop correctly would result in error.      
+plopjs *init* allows a starting point to create a plop.json and start making your own plopjs template. This is your chance to be creative and customize your plopjs.  
 
-using plop init allows a starting point to create a plop.json and start making your own plop template. This is your chance to be creative and customize your plop.  
-
-plop *init* prompts will walk you through making a new plop.json file. It will also make an empty README.md that you will need to populate and also an empty template directory. Make sure to make your template *INSIDE* the template directory. Any files other then the plop.json and README.md that are outside the template directory will not be included in your plop.  
+plop$ *init* prompts will walk you through making a new plop.json file. It will also make an empty README.md that you will need to populate and also an empty template directory. Make sure to make your template *INSIDE* the template directory. Any files other then the plop.json and README.md that are outside the template directory will not be included in your plopjs.  
 
 ####Example  
 of the plop.json prompt  
@@ -102,37 +126,68 @@ README.md
 plop.json
 template
 ​
-Change directories into your template and start building your plop!
+Change directories into your template and start building your plopjs!
 ```  
 
 Once you have your template built out you may either:  
 
-- create a new github repository on git hub and push your template
+- create a new <https://github.com/> repository on git hub and push your template.  
 or
 - git init and initialize a github repository from your working directory.  
+or  
+- use ```plop$ save``` command.   
 
 ##plop$ list  
 ```shell
 plop$ list
 ```  
-plop *list* prints a list of plop templates that are saved and available on your local client. Once a new plop is installed using plop install it will be added to the list of plops.  
+plop$ *list* prints a list of plopjs templates that are saved and available on your local client. Once a new plopjs is installed using plop$ *install* it will be added to the list of plopjs.  
+
+plop$ *list* also has a shorthand alias *ls*.  
+
+####Example of alias    
+
+```shell  
+plop$ ls
+```  
+
+##plop$ save
+
+```shell  
+plop$ save [name]
+```  
+plop$ *save* will take the existing plopjs template that you created from scratch and save locally to your plopjs cache directory. You can then use ```plop$ lsit``` to verify that your template has been saved. Now that new plopjs template will be available for any future projects.  
+
+[name] is the name you choose to name the new plopjs template you created.  
+
+*save* also has an alias *s*.  
+
+####Example of the alias  
+
+```shell
+plop$ s [name]
+```  
 
 ##plop$ delete  
 ```shell
-plop$ delete
+plop$ delete [name]
 ```   
-plop *delete* will delete any plop that is saved on your local client.
+plop$ *delete* will delete any plopjs that is saved on your local client.
 
-####Please note that delete *WILL* delete the file so double check that you are using the correct plop name.  
+####Please note that delete *WILL* delete the file so double check that you are using the correct plopjs name.  
 
 ##plop$ exit
 ```shell  
 plop$ exit
 ```  
-plop *exit* will exit the repl and take you to node shell. Exit does have an alias that will also take you out of the plop repl.  
+plop$ *exit* will exit the plop$ repl and take you to node shell. Exit does have an alias *k* or *q* that will also take you out of the plop$ repl.  
 
+####Example of the alias
 ```shell
 plop$ k
+```  
+```shell
+plop$ q  
 ```  
 
 ##plop$ help  
@@ -140,7 +195,7 @@ plop$ k
 ```shell
 plop$ help
 ```  
-plop *help* will bring up a list of plop commands and options.  
+plop$ *help* will bring up a list of plop$ commands and options.  
 
 ##Dependencies  
 - vorpal
@@ -155,8 +210,9 @@ plop *help* will bring up a list of plop commands and options.
 - gulp-mocha
 - mocha  
 
+
 ## Development Team  
 
- *Chris Perez* <https://github.com/ckperez>
- *Dan Stineback* <https://github.com/dstineback>
- *Stephen Schroder* <https://github.com/schrode50>
+ *Chris Perez* <https://github.com/ckperez>  
+ *Dan Stineback* <https://github.com/dstineback>  
+ *Stephen Schroder* <https://github.com/schrode50>  

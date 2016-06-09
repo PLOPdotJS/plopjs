@@ -1,6 +1,6 @@
 {
   "name": "plopjs",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Cloud-based storage for organization-level boilerplate code",
   "preferGlobal": true,
   "main": "plop.js",
@@ -17,18 +17,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ckperez/plopjs.git"
+    "url": "git+https://github.com/PLOPdotJS/plopjs.git"
   },
-  "author": "Chris Perez <chris.k.perez@gmail.com>",
+  "author": {
+    "name": "Stephen Schroder <schrode50@gmail.com>",
+    "name": "Chris Perez <chris.k.perez@gmail.com>",
+    "name": "Dan Stineback <dstineback@gmail.com>"
+  },
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ckperez/plopjs/issues"
+    "url": "https://github.com/PLOPdotJS/plopjs/issues"
   },
-  "homepage": "https://github.com/ckperez/plopjs#readme",
+  "homepage": "https://github.com/PLOPdotJS/plopjs#readme",
   "dependencies": {
     "fs-extra": "^0.30.0",
     "nodegit": "^0.13.1",
-    "vorpal": "^1.11.1"
+    "vorpal": "^1.11.1",
+    "vorpal-autocomplete-fs": "0.0.3"
   },
   "devDependencies": {
     "chai": "^3.5.0",
