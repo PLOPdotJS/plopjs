@@ -133,7 +133,7 @@ Once you have your template built out you may either:
 
 - create a new <https://github.com/> repository on git hub and push your template.  
 or
-- git init and initialize a github repository from your working directory.
+- git init and initialize a github repository from your working directory.  
 or  
 - use ```plop$ save``` command.   
 
