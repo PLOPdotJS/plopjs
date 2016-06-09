@@ -2,6 +2,7 @@
 'use strict';
 
 const vorpal = require('vorpal')();
+const fsAutocomplete = require('vorpal-autocomplete-fs');
 
 vorpal.delimiter('plop$').show();
 
@@ -18,10 +19,10 @@ vorpal.command('install [template_repo_url] [rename]', 'clones a plop template f
   .action(install).alias('i');
 
 vorpal.command('use [template_name] [destination_path]', 'copies a plop template (by filename) you have saved into your working directory.')
-  .action(use);
+  .action(use).autocomplete(fsAutocomplete());
 
 vorpal.command('delete [template_name...]', 'removes a locally saved plop template.')
-    .action(del);
+    .action(del).autocomplete(fsAutocomplete());
 
 vorpal.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
     .action(list).alias('ls');
