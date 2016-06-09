@@ -22,10 +22,10 @@ vorpal.command('use [template_name] [destination_path]', 'copies a plop template
   .action(use).autocomplete(fsAutocomplete());
 
 vorpal.command('delete [template_name...]', 'removes a locally saved plop template.')
-    .action(del).autocomplete(fsAutocomplete());
+  .action(del).autocomplete(fsAutocomplete());
 
 vorpal.command('list', 'displays a list of templates saved locally. Can also use `ls`.')
-    .action(list).alias('ls');
+  .action(list).alias('ls');
 
 vorpal.command('init', 'walks you through building a plop template.')
   .action(init);
