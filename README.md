@@ -78,18 +78,14 @@ plop$ i <template_url> [options]
 
 ##plop$ use  
 ```shell
-plop$ use <template> [options]  
+plop$ use <template>   
 ```  
 *template* is the name of installed plopjs template.  
 ```shell
 plop$ use sample
-```
+```  
 
-[options] path you would like the template loaded to.  
-```
-plop$ use sample /project
-```
-plop$ *use* will load what ever template you choose into specified directory or if no directory is named then it will default to your working directory.  
+plop$ *use* will load what ever template you choose into your working directory.  
 
 For *node* projects run ```npm i``` to install all the required dependencies that are used in the plopjs template.  Not installing the dependencies will throw err and not run the plopjs template correctly.  
 
