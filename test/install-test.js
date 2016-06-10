@@ -27,7 +27,7 @@ describe('install unit test', () => {
 
 });
 
-if (!env.TRAV){
+if (HOME != '/home/travis'){
   describe('install tests with before block', () => {
     let originalPlopCount;
     let plopDir = process.env.HOME + '/.config/plop/';
