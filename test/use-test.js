@@ -2,7 +2,6 @@
 
 const chai = require('chai');
 const expect = chai.expect;
-
 const use = require(__dirname + '/../lib/use');
 
 describe('should test the functionality of use', () => {
