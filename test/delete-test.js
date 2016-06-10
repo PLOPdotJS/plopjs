@@ -15,19 +15,20 @@ describe('should test delete functionality', () => {
   });
 });
 
-describe('delete tests with before blocks', ()=>{
-  let plopCountWithDeleteMe;
-  let originalPlopCount;
-  before(()=>{
-    originalPlopCount = fs.readdirSync(process.env.HOME + '/.config/plop/').length;
-    fs.mkdirsSync(process.env.HOME + '/.config/plop/deleteMe');
-    plopCountWithDeleteMe = fs.readdirSync(process.env.HOME + '/.config/plop/').length;
+if (process.env.HOME != '/home/travis/')
+  describe('delete tests with before blocks', () => {
+    let plopCountWithDeleteMe;
+    let originalPlopCount;
+    before(() => {
+      originalPlopCount = fs.readdirSync(process.env.HOME + '/.config/plop/').length;
+      fs.mkdirsSync(process.env.HOME + '/.config/plop/deleteMe');
+      plopCountWithDeleteMe = fs.readdirSync(process.env.HOME + '/.config/plop/').length;
+    });
+    it('should delete a plop template', () => {
+      expect(fs.readdirSync(process.env.HOME + '/.config/plop/').length).to.eql(plopCountWithDeleteMe);
+      Plop.execSync('delete deleteMe');
+    });
+    it('should delete a plop template for reals', () => {
+      expect(fs.readdirSync(process.env.HOME + '/.config/plop/').length).to.eql(originalPlopCount);
+    });
   });
-  it('should delete a plop template', ()=>{
-    expect(fs.readdirSync(process.env.HOME + '/.config/plop/').length).to.eql(plopCountWithDeleteMe);
-    Plop.execSync('delete deleteMe');
-  });
-  it('should delete a plop template for reals', ()=>{
-    expect(fs.readdirSync(process.env.HOME + '/.config/plop/').length).to.eql(originalPlopCount);
-  });
-});

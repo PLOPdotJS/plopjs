@@ -27,21 +27,23 @@ describe('install unit test', () => {
 
 });
 
-describe('install tests with before block', ()=>{
-  let originalPlopCount;
-  let plopDir = process.env.HOME + '/.config/plop/';
-  let testRepo = 'https://github.com/PLOPdotJS/plop-test.git';
-  before(()=>{
-    originalPlopCount = fs.readdirSync(plopDir).length;
-    Plop.execSync(`install ${testRepo} testingTesting`);
+if (process.env.HOME != '/home/travis/'){
+  describe('install tests with before block', () => {
+    let originalPlopCount;
+    let plopDir = process.env.HOME + '/.config/plop/';
+    let testRepo = 'https://github.com/PLOPdotJS/plop-test.git';
+    before(() => {
+      originalPlopCount = fs.readdirSync(plopDir).length;
+      Plop.execSync(`install ${testRepo} testingTesting`);
+    });
+    after(() => {
+      Plop.execSync('delete testingTesting');
+    });
+    it('should have one more plop template in ~/.config/plop', () => {
+      expect(fs.readdirSync(plopDir).length).to.eql(originalPlopCount + 1);
+    });
+    it('should have a directory named testingTestingin ~/.config/plop', () => {
+      expect(fs.readdirSync(plopDir).indexOf('testingTesting')).to.not.eql(-1);
+    });
   });
-  after(()=>{
-    Plop.execSync('delete testingTesting');
-  });
-  it('should have one more plop template in ~/.config/plop', ()=>{
-    expect(fs.readdirSync(plopDir).length).to.eql(originalPlopCount + 1);
-  });
-  it('should have a directory named testingTestingin ~/.config/plop', ()=>{
-    expect(fs.readdirSync(plopDir).indexOf('testingTesting')).to.not.eql(-1);
-  });
-});
+}
