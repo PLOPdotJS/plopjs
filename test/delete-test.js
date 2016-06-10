@@ -15,7 +15,7 @@ describe('should test delete functionality', () => {
   });
 });
 
-if (HOME != '/home/travis') {
+if (process.env.HOME != '/home/travis') {
   describe('delete tests with before blocks', () => {
     let plopCountWithDeleteMe;
     let originalPlopCount;
