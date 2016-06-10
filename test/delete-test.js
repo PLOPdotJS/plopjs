@@ -15,7 +15,7 @@ describe('should test delete functionality', () => {
   });
 });
 
-if (process.env.HOME != '/home/travis/')
+if (!env.TRAV) {
   describe('delete tests with before blocks', () => {
     let plopCountWithDeleteMe;
     let originalPlopCount;
@@ -32,3 +32,4 @@ if (process.env.HOME != '/home/travis/')
       expect(fs.readdirSync(process.env.HOME + '/.config/plop/').length).to.eql(originalPlopCount);
     });
   });
+}
