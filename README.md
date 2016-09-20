@@ -132,7 +132,7 @@ Change directories into your template and start building your plopjs!
 
 Once you have your template built out, you may either:  
 
-- create a new <https://github.com/> repository on git hub and push your template.  
+- create a new <https://github.com/> repository and push your template.  
 or  
 - git init and initialize a github repository from your working directory.  
 or  
