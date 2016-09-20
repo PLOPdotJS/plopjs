@@ -1,6 +1,6 @@
 {
   "name": "plopjs",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cloud-based storage for organization-level boilerplate code",
   "preferGlobal": true,
   "main": "plop.js",
